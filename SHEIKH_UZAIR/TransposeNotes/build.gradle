@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.8'
+}
+
+application {
+    mainClassName = 'com.example.Main'
+}
+
+shadowJar {
+    archiveBaseName.set('TransposeNotes')
+    archiveVersion.set('1.0')
+    manifest {
+        attributes(
+                'Main-Class': 'com.example.Main'
+        )
+    }
+}
