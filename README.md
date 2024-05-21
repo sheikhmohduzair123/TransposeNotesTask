@@ -1,12 +1,16 @@
-# TransposeNotesTask
-TransposeNotes is a Java-based application that transposes a collection of musical notes by a specified number of semitones.
+# TransposeNotes
 
-### Including Screenshots
+TransposeNotes is a Java application that transposes a collection of musical notes by a specified number of semitones. The application reads an input JSON file containing the notes, transposes them, and writes the transposed notes to an output JSON file. If any note falls out of the valid range after transposition, the application will print an error message and exit without creating an output file.
 
-To include screenshots in your `README.md`, place the image files in a directory named `images` and reference them using Markdown image syntax:
+## Requirements
 
-```markdown
-![Clone Repository](images/clone_repository.png)
-![Build Success](images/build_success.png)
-![Execute Command](images/execute_command.png)
-![Error Handling](images/error_handling.png)
+- Java 8 or higher
+- Gradle
+
+## Building the Project
+
+To build the project, run the following command in the project directory:
+
+```sh
+gradle build
+
